@@ -90,26 +90,32 @@ public String getProviderName() {
    return this.providerName;
 }
 
-//method for BMI of policy holder
-public static double bmi(double weight, double height) {
-   return (weight * 703) / (height * height);
+//bmi scale getter and setter
+public void setBmi(double weight, double height) {
+   this.bmi = bmi;
 }
+
+public double getBmi() {
+   return this.bmi = (weight * 703) / (height * height);
+}
+
 
 //method for insurance fee
 public static double policyFee(int age, String smokingStatus, double bmi) {
    double insuranceBase;
 
    insuranceBase = 600;
-
+   
    if (age > 50) {
-      insuranceBase = 600 + 75;
-      }
-   if (smokingStatus == "smoker") {
-      insuranceBase = 600 + 100;
-   } 
-   if (bmi > 35) {
-      insuranceBase = 600 + (bmi - 35) * 20;
+      insuranceBase += 75;
    }  
-   return insuranceBase;  
+   if (smokingStatus.equals("smoker")) {
+      insuranceBase += 100;
+   }
+   if (bmi > 35) {
+      insuranceBase += (bmi - 35) * 20;
+   }
+   return insuranceBase;
 }
 }
+
