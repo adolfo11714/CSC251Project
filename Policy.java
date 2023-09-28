@@ -127,7 +127,7 @@ public class Policy {
 
    
      
-   //method for displaying user input from program
+   //method for displaying user input from the program
    public void displayUser() {
       System.out.println("Policy Number: " + getNumber());
       System.out.println("Provider Name: " + getProvider());
