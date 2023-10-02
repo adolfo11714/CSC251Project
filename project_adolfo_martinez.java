@@ -79,7 +79,7 @@ public class project_adolfo_martinez {
          System.out.println();
          
      } //close loop
-      
-      
+     System.out.println("The number of policies with a smoker is: " + smokerCount); 
+     System.out.println("The number of policies with a non-smoker is: " + nonsmokerCount); 
    }
 }
