@@ -80,8 +80,8 @@ public class project_adolfo_martinez {
          
      } //close loop
      
-     System.out.println("The number of policies with a smoker is: " + smokerCount); 
-     System.out.println("The number of policies with a non-smoker is: " + nonsmokerCount);
+     System.out.println("The number of policies with a smoker is: " + smokerCount); //displays total smokers from text file
+     System.out.println("The number of policies with a non-smoker is: " + nonsmokerCount); //displays total nonsmokers from text file
       
    }
 }
