@@ -8,7 +8,7 @@ public class Policy {
    //arg constructor
    //@param number = policy number; @param age = policyholder age; @param provider = provider name; @param fname = first name; @param lname = last name
    //@param smokingStatus = policyholder smoking status; @param height = height in inches of policyholder; @param weight = weight in pounds of policyholder
-   public Policy(int number, int age, String provider, String fname, String lname, String smokingStatus, double height, double weight) {
+   public Policy(int number, String provider, String fname, String lname, int age, String smokingStatus, double height, double weight) {
       this.number = number;
       this.age = age;
       this.provider = provider;
