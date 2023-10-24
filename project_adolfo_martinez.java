@@ -5,6 +5,7 @@ import java.util.ArrayList; //importing arraylist
 public class project_adolfo_martinez {
    public static void main(String[] args) throws IOException {
       
+      int objectCount;
       int smokerCount = 0; //accumalator for smokers
       int nonsmokerCount = 0; //accumalator for nonsmoker
       int number, age; //policy number, policyholders age
@@ -57,29 +58,19 @@ public class project_adolfo_martinez {
             inputFile.nextLine(); //skips line for empty spaces below the text file
          
          
-         Policy p = new Policy(number, provider, fname, lname, age, smokingStatus, height, weight); //policy class constructor to put into arraylist
-         
-         policies.add(p); //adds policyholders information in an arraylist
+          Policy p = new Policy(number, provider);
+          PolicyHolder ph = new PolicyHolder(age, fname, lname, smokingStatus, height, weight);
+          System.out.println(p);
+          System.out.println(ph + "\n");
+          
+          policies.add(p);
+          
       } //closed loop
       
       inputFile.close(); //closes file
-
-      //loop to display info of arraylist to the user of all the policies in the text file
-      for (int i = 0; i < policies.size(); i++) { //open loop
-         System.out.println("Policy Number: " + policies.get(i).getNumber());
-         System.out.println("Provider Name: " + policies.get(i).getProvider());
-         System.out.println("Policyholder's First Name: " + policies.get(i).getFname());
-         System.out.println("Policyholder's Last Name: " + policies.get(i).getLname());
-         System.out.println("Policyholder's Age: " + policies.get(i).getAge());
-         System.out.println("Policyholder's Smoking Status: " + policies.get(i).getSmokingStatus());
-         System.out.println("Policyholder's Height: " + policies.get(i).getHeight() + " inches");
-         System.out.println("Policyholder's Weight: " + policies.get(i).getWeight() + " pounds");
-         System.out.println("Policyholder's BMI: " + String.format("%.2f", policies.get(i).getBmi()) );
-         System.out.println("Policy Price: " + String.format("$%,.2f", policies.get(i).insuranceCost()) );
-         System.out.println();
-         
-     } //close loop
-     
+      
+     System.out.println("There were " + policies.size() + " Policy objects created.");
+     System.out.println();
      System.out.println("The number of policies with a smoker is: " + smokerCount); //displays total smokers from text file
      System.out.println("The number of policies with a non-smoker is: " + nonsmokerCount); //displays total nonsmokers from text file
       
