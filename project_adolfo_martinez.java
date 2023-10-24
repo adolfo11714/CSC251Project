@@ -5,7 +5,6 @@ import java.util.ArrayList; //importing arraylist
 public class project_adolfo_martinez {
    public static void main(String[] args) throws IOException {
       
-      int objectCount;
       int smokerCount = 0; //accumalator for smokers
       int nonsmokerCount = 0; //accumalator for nonsmoker
       int number, age; //policy number, policyholders age
