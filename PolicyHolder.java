@@ -133,4 +133,11 @@ public class PolicyHolder {
                                               
            return total;
         }
+        
+   public String toString() {
+      return "Policyholder's first name: " + fname + "\nPolicyholder's last name: " + 
+             lname + "\nPolicyholder's Age: " + age + "\nPolicyholder's Smoking Status: " +
+             smokingStatus + "\nPolicyholder's Height: " + height + "\nPolicyholder's weight: "
+             + weight + "\nPolicyholder's BMI: " + getBmi() + "\nPolicy Price: " + insuranceCost();
+   }
 }
