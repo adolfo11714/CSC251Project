@@ -2,6 +2,7 @@ public class PolicyHolder {
    private int age; //policy number, policyholders age
    private String fname, lname, smokingStatus; //provider name, first name, last name, smoking status
    private double height, weight; //height(in inches), weight(in pounds)
+   private static int policyCount = 0; //accumulator for how many policy objects there are
    
    //@param age = age; @param fname = first name; @param lname = last name
    //@param smokingStatus = policyholder smoking status; @param height = height in inches of policyholder; @param weight = weight in pounds of policyholder
@@ -12,6 +13,10 @@ public class PolicyHolder {
       this.smokingStatus = smokingStatus;
       this.height = height;
       this.weight = weight;
+   }
+   
+   public PolicyHolder() {
+      policyCount++;
    }
    
    //setters
@@ -68,6 +73,11 @@ public class PolicyHolder {
    //@returns policyholder weight
    public double getWeight() {
       return this.weight;
+   }
+   
+   //@returns how many times the policy object was called
+   public int getPolicyCount() {
+      return policyCount;
    }
    
    //methods
