@@ -69,7 +69,7 @@ public class project_adolfo_martinez {
       
       inputFile.close(); //closes file
       
-     System.out.println("There were " + policies.size() + " Policy objects created.");
+     System.out.println("There were " + policies.size() + " Policy objects created."); //displays total policy objects
      System.out.println();
      System.out.println("The number of policies with a smoker is: " + smokerCount); //displays total smokers from text file
      System.out.println("The number of policies with a non-smoker is: " + nonsmokerCount); //displays total nonsmokers from text file
