@@ -21,5 +21,10 @@ public class Policy {
    public String getProvider() {
       return this.provider;
    }
+   
+   public String toString() {
+      return "Policy Number: " + number + "\nProvider: "
+             + provider;
+   }
   
 }
